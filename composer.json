@@ -1,0 +1,35 @@
+{
+    "name":        "genj/google-drive-bundle",
+    "type":        "symfony-bundle",
+    "description": "Genj Google Drive bundle",
+    "keywords":    ["genj", "google", "drive", "symfony", "bundle"],
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name":  "Choong Wei Tjeng",
+            "email": "choong.wei.tjeng@genj.nl"
+        },
+        {
+            "name":  "Nico Kaag",
+            "email": "nico.kaag@genj.nl"
+        },
+        {
+            "name":  "Susan Lau",
+            "email": "susan.lau@genj.nl"
+        }
+    ],
+
+    "require": {
+        "symfony/symfony": "2.5.*",
+        "google/apiclient": "1.0.*@dev"
+    },
+
+    "minimum-stability": "dev",
+
+    "autoload": {
+        "psr-0": {
+            "Genj\\GoogleDriveBundle\\": "src/"
+        }
+    }
+}

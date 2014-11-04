@@ -22,8 +22,8 @@ class PageController extends Controller
         // Read images from the upload path
         $filesString    = '["placeholder"]';
         $filesArray     = glob($uploadPath . '*\.{jpg,jpeg,png,gif,bmp,JPG,JPEG,PNG,GIF,BMP}', GLOB_BRACE);
-	$filesArraySize = sizeof($filesArray);
-        for ($ctr = 0; $ctr <= $filesArraySize; $ctr++) {
+        $filesArraySize = sizeof($filesArray);
+        for ($ctr = 0; $ctr < $filesArraySize; $ctr++) {
             if ($filesArray[$ctr]) {
                 $filesString = '["' . $filesArray[$ctr] . '"],' . $filesString;
             }

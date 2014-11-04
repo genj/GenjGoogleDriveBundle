@@ -29,11 +29,7 @@ class PageController extends Controller
             }
         }
 
-        return $this->render('GenjGoogleDriveBundle:Page:slideshow.html.twig', array(
-                'baseUrl' => DIRECTORY_SEPARATOR . $uploadPath,
-                'images'  => $filesString
-            )
-        );
+        return $this->render('GenjGoogleDriveBundle:Page:slideshow.html.twig', array('images'  => $filesString));
     }
 }
 

@@ -63,7 +63,7 @@ class SyncCommand extends ContainerAwareCommand
 
         // Get local and Google Drive file listings to prepare for the sync
         $filesLocal       = $this->retrieveLocalFilesList($uploadPath);
-        $filesGoogleDrive = $files = $service->files->listFiles();
+        $filesGoogleDrive = $service->files->listFiles();
 
         // Download new files
         $filesGoogleDriveFilenames = array();

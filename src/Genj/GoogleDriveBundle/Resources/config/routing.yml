@@ -1,3 +1,4 @@
 genj_google_drive_page_slideshow:
     pattern:  /google-drive/slideshow
     defaults: { _controller: GenjGoogleDriveBundle:Page:slideshow }
+

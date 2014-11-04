@@ -20,9 +20,10 @@ class PageController extends Controller
         $uploadPath = $this->container->getParameter('genj_google_drive.upload_path') . DIRECTORY_SEPARATOR;
 
         // Read images from the upload path
-        $filesString = '["placeholder"]';
-        $filesArray  = glob($uploadPath . '*\.{jpg,jpeg,png,gif,bmp,JPG,JPEG,PNG,GIF,BMP}', GLOB_BRACE);
-        for ($ctr = 0; $ctr <= sizeof($filesArray); $ctr++) {
+        $filesString    = '["placeholder"]';
+        $filesArray     = glob($uploadPath . '*\.{jpg,jpeg,png,gif,bmp,JPG,JPEG,PNG,GIF,BMP}', GLOB_BRACE);
+	$filesArraySize = sizeof($filesArray);
+        for ($ctr = 0; $ctr <= $filesArraySize; $ctr++) {
             if ($filesArray[$ctr]) {
                 $filesString = '["' . $filesArray[$ctr] . '"],' . $filesString;
             }
@@ -35,3 +36,4 @@ class PageController extends Controller
         );
     }
 }
+
